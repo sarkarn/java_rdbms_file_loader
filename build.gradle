@@ -1,0 +1,39 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.nns.file.loader'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'commons-codec:commons-codec'
+	implementation 'commons-io:commons-io:2.4'
+	implementation 'org.json:json:20201115'
+	implementation 'com.fasterxml.jackson.core:jackson-core:2.10.5'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.5'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.5.1'
+	implementation 'com.fasterxml.jackson.core:jackson-databind-nullable:0.2.1'
+	implementation 'org.apache.commons:commons-csv:1.9.0'
+	implementation 'org.apache.poi:poi:4.1.2'
+	implementation 'org.apache.poi:poi-ooxml:4.1.2'
+	implementation 'org.apache.poi:poi:4.1.2'
+	compileOnly 'org.projectlombok:lombok:1.18.12'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
